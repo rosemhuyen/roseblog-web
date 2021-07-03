@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Dget on Spreadsheet Made Easy</title>
+    <title>Dget on Stupid Spreadsheets</title>
     <link>https://rosespreadsheet.com/tags/dget/</link>
-    <description>Recent content in Dget on Spreadsheet Made Easy</description>
+    <description>Recent content in Dget on Stupid Spreadsheets</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 22 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rosespreadsheet.com/tags/dget/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Simple Look Up Functions for Spreadsheet</title>
+      <title>Simple Lookup Functions for Excel and Google Sheets</title>
       <link>https://rosespreadsheet.com/post/lookup-functions/</link>
       <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://rosespreadsheet.com/post/lookup-functions/</guid>
-      <description>1. Introduction </description>
+      <description>1. The Most Simple Functions Vlookup/Hlookup This is a simple, yet powerful function used to look for a value vertically.
+2. Best Friends Forever Index &amp;amp; Match 3. Multiple Columns DGET - A Handsome Boy </description>
     </item>
     
   </channel>
