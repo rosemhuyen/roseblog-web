@@ -52,17 +52,28 @@
   
   
   
-    <h1 style="margin: 0"><a href="https://rosespreadsheet.com/post/tip-2/">Tip #2 - Copy Formula Down or to The Right</a></h1>
+    <h1 style="margin: 0"><a href="https://rosespreadsheet.com/post/xlookup-function/">Forget VLookup if You&#39;re Using Office 365</a></h1>
     <p class="document-date">
-      2021-09-19 &middot; Rose Nguyen
+      2021-10-16 &middot; Rose Nguyen
     </p>
     <hr class="red-hr"/>
-    <p>Another interesting tip I want to share is to copy formula down or to the right by using your keyboard.</p>
-<p>Suppose you have a formula in Cell <strong>A1</strong> and want to drag the formula down to <strong>A10</strong>. Instead of using your mouse to do it, alternatively, you can also do the following:</p>
-<p>Select <strong>A1</strong> -&gt; <strong>Ctrl</strong> + <strong>Shift</strong> + <strong>Down Arrow</strong> until you reach <strong>A10</strong>, or you can just simply select range <strong>A1:A10</strong>. Then press <strong>Ctrl</strong> + <strong>D</strong> from your keyboard.</p>
-<p>Similarly if you want to copy the formula to the right, simply using <strong>Ctrl</strong> + <strong>R</strong>.</p>
-<p><img src="/images/copy-formula.gif" alt="alt"></p>
-<p>Easy Peasy!</p>
+    <p>If you&rsquo;re currently using Office 365, then relying on VLookup is a waste of time :D</p>
+<p>Because XLookup will become your best friend forever. Here&rsquo;s how it works:</p>
+<pre><code>```=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])```
+</code></pre>
+<p><em><strong>Note that the arguments in square brackets are optional</strong></em></p>
+<p>As you may know, VLookup can only look for the data from left to right, not the oposite. With XLookup, you can do both ways. Let&rsquo;s go straight to an example:</p>
+<p><strong>Look for the name of the products with the given product codes below</strong></p>
+<p><img src="/images/XLookup1.png" alt="alt"></p>
+<p>Suppose this is the master database you have:</p>
+<p><img src="/images/XLookup2.png" alt="alt"></p>
+<p>Here&rsquo;s the formula at <strong>B2</strong> (first image):</p>
+<pre><code>```=XLOOKUP(A2,'Master Database'!$A:$A,'Master Database'!$B:$B)```
+</code></pre>
+<p>If the product code is not in the master database and you want to leave it blank, then do this:</p>
+<pre><code>```=XLOOKUP(A2,'Master Database'!$A:$A,'Master Database'!$B:$B,&quot;&quot;)```
+</code></pre>
+<p><img src="/images/XLookup.gif" alt="alt"></p>
 <p>Have fun!</p>
 
 
@@ -82,6 +93,8 @@
       <div class="footer-recent-posts">
         <h6>Recent Posts</h6>
         <ol>
+          
+          <li><a href="https://rosespreadsheet.com/post/xlookup-function/">Forget VLookup if You&#39;re Using Office 365</a></li>
           
           <li><a href="https://rosespreadsheet.com/post/tip-2/">Tip #2 - Copy Formula Down or to The Right</a></li>
           
@@ -140,6 +153,9 @@
     <a class="taxa" href="https://rosespreadsheet.com/tags/dget/">Dget</a>
   
   
+    <a class="taxa" href="https://rosespreadsheet.com/tags/filter/">Filter</a>
+  
+  
     <a class="taxa" href="https://rosespreadsheet.com/tags/googlesheet/">GoogleSheet</a>
   
   
@@ -150,6 +166,9 @@
   
   
     <a class="taxa" href="https://rosespreadsheet.com/tags/vlookup/">Vlookup</a>
+  
+  
+    <a class="taxa" href="https://rosespreadsheet.com/tags/xlookup/">Xlookup</a>
   
 </div>
 
@@ -178,7 +197,7 @@
       </p>
       <p>
         <span>&copy;</span>
-        <span>2021</span>
+        <span>2022</span>
         <span>Rose Nguyen</span>
       </p>
     </div>

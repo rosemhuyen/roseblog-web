@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
   <title>
-     spreadsheet -  Stupid Spreadsheets
+     Forget VLookup if You&#39;re Using Office 365 -  Stupid Spreadsheets
   </title>
   <meta name="theme-color" content="#a3001b" />
   <meta charset="utf-8" />
@@ -35,75 +35,84 @@
 
   </div>
   <div class="page-title-and-info" style="text-align: center">
-    <h1 class="page-title" style="margin-bottom: 1em;">
-      #spreadsheet
+    <h1 class="page-title" >
+      Forget VLookup if You&#39;re Using Office 365
     </h1>
     
+    <p class="document-date">
+      2021-10-16 &middot; 
+    </p>
+     
   </div>
 </header>
 
     
     <main class="card shadow round-corner">
-<div class="taxonomy-data">
-  
-  <div class="list-page-data">
-  <time class="list-page-date">
-    2021-10-16
-  </time>
-  <a
-    class="archive-table-link"
-    href="https://rosespreadsheet.com/post/xlookup-function/"
-  >
-    Forget VLookup if You&#39;re Using Office 365
-  </a>
+<div style="display: flex; justify-content: flex-end">
+  <div class="share-links">
+    
+    <a
+      class="icon active"
+      href="mailto:?subject=Forget%20VLookup%20if%20You%27re%20Using%20Office%20365%20by%20Rose%20Nguyen&amp;body=https%3a%2f%2frosespreadsheet.com%2fpost%2fxlookup-function%2f"
+      target="_self"
+      rel="noopener"
+      aria-label="share by email"
+      ><i class="bi bi-envelope-fill"></i
+    ></a>
+    <a
+      class="icon active"
+      href="https://twitter.com/intent/tweet/?text=Forget%20VLookup%20if%20You%27re%20Using%20Office%20365%20by%20%3cnil%3e&amp;url=https%3a%2f%2frosespreadsheet.com%2fpost%2fxlookup-function%2f"
+      target="_blank"
+      rel="noopener"
+      aria-label="share on twitter"
+      ><i class="bi bi-twitter"></i
+    ></a>
+    <a
+      class="icon active"
+      href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2frosespreadsheet.com%2fpost%2fxlookup-function%2f"
+      target="_blank"
+      rel="noopener"
+      aria-label="share on twitter"
+      ><i class="bi bi-linkedin"></i
+    ></a>
+  </div>
 </div>
 
-  
-  <div class="list-page-data">
-  <time class="list-page-date">
-    2021-09-19
-  </time>
-  <a
-    class="archive-table-link"
-    href="https://rosespreadsheet.com/post/tip-2/"
-  >
-    Tip #2 - Copy Formula Down or to The Right
-  </a>
-</div>
+<p>If you&rsquo;re currently using Office 365, then relying on VLookup is a waste of time :D</p>
+<p>Because XLookup will become your best friend forever. Here&rsquo;s how it works:</p>
+<pre><code>```=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])```
+</code></pre>
+<p><em><strong>Note that the arguments in square brackets are optional</strong></em></p>
+<p>As you may know, VLookup can only look for the data from left to right, not the oposite. With XLookup, you can do both ways. Let&rsquo;s go straight to an example:</p>
+<p><strong>Look for the name of the products with the given product codes below</strong></p>
+<p><img src="/images/XLookup1.png" alt="alt"></p>
+<p>Suppose this is the master database you have:</p>
+<p><img src="/images/XLookup2.png" alt="alt"></p>
+<p>Here&rsquo;s the formula at <strong>B2</strong> (first image):</p>
+<pre><code>```=XLOOKUP(A2,'Master Database'!$A:$A,'Master Database'!$B:$B)```
+</code></pre>
+<p>If the product code is not in the master database and you want to leave it blank, then do this:</p>
+<pre><code>```=XLOOKUP(A2,'Master Database'!$A:$A,'Master Database'!$B:$B,&quot;&quot;)```
+</code></pre>
+<p><img src="/images/XLookup.gif" alt="alt"></p>
+<p>Have fun!</p>
 
-  
-  <div class="list-page-data">
-  <time class="list-page-date">
-    2021-09-18
-  </time>
-  <a
-    class="archive-table-link"
-    href="https://rosespreadsheet.com/post/tip-1/"
-  >
-    Tip #1 - How to Remove or Automatically Update Links in a Speadsheet
-  </a>
-</div>
-
-  
-  <div class="list-page-data">
-  <time class="list-page-date">
-    2021-06-22
-  </time>
-  <a
-    class="archive-table-link"
-    href="https://rosespreadsheet.com/post/lookup-functions/"
-  >
-    Simple Lookup Functions for Excel and Google Sheets
-  </a>
-</div>
-
-  
-</div>
 
     </main><footer>
   
   
   
+  
+  <div class="prev-next">
+    <a
+      class="active icon"
+      href="/post/tip-2/"
+      aria-label="Previous Article"
+      ><i class="bi bi-arrow-left-circle-fill"></i
+    ></a>
+    <div class="disabled icon"><i class="bi bi-arrow-right-circle-fill"></i></div>
+  </div>
+  </div>
   
   <div class="footer shadow round-corner">
     

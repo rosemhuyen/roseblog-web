@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Filter on Stupid Spreadsheets</title>
+    <link>https://rosespreadsheet.com/tags/filter/</link>
+    <description>Recent content in Filter on Stupid Spreadsheets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 16 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rosespreadsheet.com/tags/filter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Forget VLookup if You&#39;re Using Office 365</title>
+      <link>https://rosespreadsheet.com/post/xlookup-function/</link>
+      <pubDate>Sat, 16 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rosespreadsheet.com/post/xlookup-function/</guid>
+      <description>If you&amp;rsquo;re currently using Office 365, then relying on VLookup is a waste of time :D
+Because XLookup will become your best friend forever. Here&amp;rsquo;s how it works:
+```=XLOOKUP(lookup_value, lookup_array, return_array, [if_not_found], [match_mode], [search_mode])```  Note that the arguments in square brackets are optional
+As you may know, VLookup can only look for the data from left to right, not the oposite. With XLookup, you can do both ways. Let&amp;rsquo;s go straight to an example:</description>
+    </item>
+    
+  </channel>
+</rss>
