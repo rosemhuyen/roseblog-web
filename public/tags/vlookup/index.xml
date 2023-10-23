@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vlookup on Stupid Spreadsheets</title>
+    <link>https://rosespreadsheet.com/tags/vlookup/</link>
+    <description>Recent content in Vlookup on Stupid Spreadsheets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 22 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rosespreadsheet.com/tags/vlookup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simple Lookup Functions for Excel and Google Sheets</title>
+      <link>https://rosespreadsheet.com/post/lookup-functions/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rosespreadsheet.com/post/lookup-functions/</guid>
+      <description>Scenario: You are assigned to manage 5 items from the purchasing manager. In the systems the company is using, you exported a list of all products they have as well as the data of the stock on hand (SOH), you would like to look for the product names and the stock on hand from the codes given.
+First, download your practice sheet here: https://drive.google.com/drive/folders/1G5aJb4IUIJfac0PBnGZ9gDHB4ku3RT2R?usp=sharing
+Here are what you can do on your spreadsheet to look for the information more quickly and effectively:</description>
+    </item>
+    
+  </channel>
+</rss>

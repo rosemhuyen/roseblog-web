@@ -1,0 +1,7 @@
+{{ define "main" }}
+<div class="taxonomy-data">
+  {{ range (.Paginator 10).Pages.ByDate.Reverse }}
+  {{ partial "listPage" . }}
+  {{ end }}
+</div>
+{{ end }}

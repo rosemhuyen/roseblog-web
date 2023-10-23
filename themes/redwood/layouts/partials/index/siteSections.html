@@ -1,0 +1,10 @@
+<h6>Sections</h6>
+<div class="section-container">
+  {{ range .Site.Sections }}
+  {{ if not .Params.hideFromHome }}
+  <a class="section" href="{{ .Permalink }}" aria-label="site sections"
+    >{{ .Title }}</a
+  >
+  {{ end }}
+  {{ end }}
+</div>

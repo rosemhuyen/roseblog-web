@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>find-links on Stupid Spreadsheets</title>
+    <link>https://rosespreadsheet.com/tags/find-links/</link>
+    <description>Recent content in find-links on Stupid Spreadsheets</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 19 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://rosespreadsheet.com/tags/find-links/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tip #2 - Copy Formula Down or to The Right</title>
+      <link>https://rosespreadsheet.com/post/tip-2/</link>
+      <pubDate>Sun, 19 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rosespreadsheet.com/post/tip-2/</guid>
+      <description>Another interesting tip I want to share is to copy formula down or to the right by using your keyboard.
+Suppose you have a formula in Cell A1 and want to drag the formula down to A10. Instead of using your mouse to do it, alternatively, you can also do the following:
+Select A1 -&amp;gt; Ctrl + Shift + Down Arrow until you reach A10, or you can just simply select range A1:A10.</description>
+    </item>
+    
+    <item>
+      <title>Tip #1 - How to Remove or Automatically Update Links in a Speadsheet</title>
+      <link>https://rosespreadsheet.com/post/tip-1/</link>
+      <pubDate>Sat, 18 Sep 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://rosespreadsheet.com/post/tip-1/</guid>
+      <description>My colleagues often wonder how I could solve excel problems in seconds and everything about excel seems so easy for me. The answer is I know some interesting tips that can help me find the problem quickly. Here is one of them.
+Suppose you open an excel speadsheet and this message pops up: &amp;ldquo;This workbook contains links to one or more external sources that could be unsafe.&amp;rdquo;
+1. Find The Links and Remove Them You find this message annoying and want to remove all the links in the workbook.</description>
+    </item>
+    
+  </channel>
+</rss>

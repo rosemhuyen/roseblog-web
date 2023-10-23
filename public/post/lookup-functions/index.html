@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <title>
+     Simple Lookup Functions for Excel and Google Sheets -  Stupid Spreadsheets
+  </title>
+  <meta name="theme-color" content="#a3001b" />
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <link rel="icon" href="/images/favicon.png"/>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&family=Ubuntu+Mono&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css"
+  />
+</head>
+<body>
+    
+    <header class="regular-page-header shadow round-corner">
+  <div
+    style="
+      display: flex;
+      justify-content: space-between;
+      width: 98%;
+      margin-bottom: 0.5em;
+    "
+  >
+    <a class="primary-icon" href="/" aria-label="home page">
+      <i class="bi bi-house-fill"></i>
+    </a>
+
+  </div>
+  <div class="page-title-and-info" style="text-align: center">
+    <h1 class="page-title" >
+      Simple Lookup Functions for Excel and Google Sheets
+    </h1>
+    
+    <p class="document-date">
+      2021-06-22 &middot; 
+    </p>
+     
+  </div>
+</header>
+
+    
+    <main class="card shadow round-corner">
+<div style="display: flex; justify-content: flex-end">
+  <div class="share-links">
+    
+    <a
+      class="icon active"
+      href="mailto:?subject=Simple%20Lookup%20Functions%20for%20Excel%20and%20Google%20Sheets%20by%20Rose%20Nguyen&amp;body=https%3a%2f%2frosespreadsheet.com%2fpost%2flookup-functions%2f"
+      target="_self"
+      rel="noopener"
+      aria-label="share by email"
+      ><i class="bi bi-envelope-fill"></i
+    ></a>
+    <a
+      class="icon active"
+      href="https://twitter.com/intent/tweet/?text=Simple%20Lookup%20Functions%20for%20Excel%20and%20Google%20Sheets%20by%20%3cnil%3e&amp;url=https%3a%2f%2frosespreadsheet.com%2fpost%2flookup-functions%2f"
+      target="_blank"
+      rel="noopener"
+      aria-label="share on twitter"
+      ><i class="bi bi-twitter"></i
+    ></a>
+    <a
+      class="icon active"
+      href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2frosespreadsheet.com%2fpost%2flookup-functions%2f"
+      target="_blank"
+      rel="noopener"
+      aria-label="share on twitter"
+      ><i class="bi bi-linkedin"></i
+    ></a>
+  </div>
+</div>
+
+<p><strong>Scenario:</strong> You are assigned to manage 5 items from the purchasing manager. In the systems the company is using, you exported a list of all products they have as well as the data of the stock on hand (SOH), you would like to look for the product names and the stock on hand from the codes given.</p>
+<p>First, download your practice sheet here: <a href="https://drive.google.com/drive/folders/1G5aJb4IUIJfac0PBnGZ9gDHB4ku3RT2R?usp=sharing">https://drive.google.com/drive/folders/1G5aJb4IUIJfac0PBnGZ9gDHB4ku3RT2R?usp=sharing</a></p>
+<p><img src="/images/gif01.gif" alt="alt"></p>
+<p>Here are what you can do on your spreadsheet to look for the information more quickly and effectively:</p>
+<h1 id="1-the-most-simple-function-vlookup">1. The Most Simple Function Vlookup</h1>
+<p>The descriptions in column B of your spreadsheet is empty, you want to look for their names from the product list. Use <strong>VLOOKUP</strong>!</p>
+<p>When typing <code>=VLOOKUP</code> on <em>Excel</em> or <em>Google Sheets</em>, the instructions will appear to help you figure out what kind of data you should put into the function, it looks like this:</p>
+<p><em><strong>Excel:</strong></em></p>
+<p><img src="/images/img03.png" alt="alt">
+<em><strong>Google Sheets:</strong></em></p>
+<p><img src="/images/img05.png" alt="alt"></p>
+<p>Note that <strong>VLOOKUP</strong> can only look for the data from left to right, not the opposite. In this case, if you want to look for the description of the products in column B, you can totally use this function to get the names from the product list:</p>
+<pre><code>```=VLOOKUP(A2,'Product List'!$A$2:$B$10,2,FALSE)```
+</code></pre>
+<p><img src="/images/img01.jpg" alt="alt"></p>
+<p>There you go! You got the descriptions for your assigned products.</p>
+<h1 id="2-best-friends-forever-index--match">2. Best Friends Forever Index &amp; Match</h1>
+<p>What if your managers gave you only the names, and you want to look for the codes. Remember VLOOKUP can only look for the data from left to right. Now you want to find the information from right to left. What should you do? Use INDEX &amp; MATCH!</p>
+<p><img src="/images/img06.png" alt="alt"></p>
+<p>Here is how <strong>INDEX</strong> works:</p>
+<pre><code>```=INDEX(array, row_num, column_num)```
+</code></pre>
+<p>(1) <em>array</em> is a range where you want to search for the product codes, which is column A in <strong>Product List</strong>
+(2) <em>row_num</em> is the row in which it contains the product codes
+(3) <em>column_num</em> is the column in which it contains the product codes</p>
+<p>What about <strong>MATCH</strong>? It will help you identify exactly which row or column will have the information.</p>
+<pre><code>```=MATCH(lookup_value, lookup_array, [match_type])```
+</code></pre>
+<p>(1) <em>lookup_value</em> is the product names in column B of your data       <br>
+(2) <em>lookup_array</em> is the products names in the column B of the <strong>Product List</strong>  <br>
+(3) <em>[match_type]</em> choose 0 to return exact match</p>
+<p>In this case, apply this formula:</p>
+<pre><code>```=INDEX('Product List'!$A$2:$A$10,MATCH(Purchasing!B11,'Product List'!$B$2:$B$10,0),1)```
+</code></pre>
+<p><img src="/images/gif02.gif" alt="alt"></p>
+<p>DONE. Easy peasy!</p>
+<p>Have fun!</p>
+
+
+    </main><footer>
+  
+  
+  
+  
+  <div class="prev-next">
+    <div class="disabled icon"><i class="bi bi-arrow-left-circle-fill"></i></div>
+    <a
+      class="active icon"
+      href="/post/tip-1/"
+      aria-label="Next Article"
+      ><i class="bi bi-arrow-right-circle-fill"></i
+    ></a>
+  </div>
+  </div>
+  
+  <div class="footer shadow round-corner">
+    
+    <div class="grid-container">
+      <div class="footer-recent-posts">
+        <h6>Recent Posts</h6>
+        <ol>
+          
+          <li><a href="https://rosespreadsheet.com/post/xlookup-function/">Forget VLookup if You&#39;re Using Office 365</a></li>
+          
+          <li><a href="https://rosespreadsheet.com/post/tip-2/">Tip #2 - Copy Formula Down or to The Right</a></li>
+          
+          <li><a href="https://rosespreadsheet.com/post/tip-1/">Tip #1 - How to Remove or Automatically Update Links in a Speadsheet</a></li>
+          
+          <li><a href="https://rosespreadsheet.com/post/lookup-functions/">Simple Lookup Functions for Excel and Google Sheets</a></li>
+          
+        </ol>
+        <a href="/post">...ALL POSTS</a>
+        <hr class="mobile white-hr" />
+      </div>
+      <div>
+        <h6>Sections</h6>
+<div class="section-container">
+  
+  
+  <a class="section" href="https://rosespreadsheet.com/post/" aria-label="site sections"
+    >Posts</a
+  >
+  
+  
+</div>
+
+        
+
+
+
+
+
+
+
+
+
+<h6>
+  Tags
+</h6>
+
+<div class="taxa-container">
+  
+  
+    <a class="taxa" href="https://rosespreadsheet.com/tags/excel/">excel</a>
+  
+  
+    <a class="taxa" href="https://rosespreadsheet.com/tags/spreadsheet/">spreadsheet</a>
+  
+  
+    <a class="taxa" href="https://rosespreadsheet.com/tags/excel-tips/">excel-tips</a>
+  
+  
+    <a class="taxa" href="https://rosespreadsheet.com/tags/find-links/">find-links</a>
+  
+  
+    <a class="taxa" href="https://rosespreadsheet.com/tags/tips/">tips</a>
+  
+  
+    <a class="taxa" href="https://rosespreadsheet.com/tags/dget/">Dget</a>
+  
+  
+    <a class="taxa" href="https://rosespreadsheet.com/tags/filter/">Filter</a>
+  
+  
+    <a class="taxa" href="https://rosespreadsheet.com/tags/googlesheet/">GoogleSheet</a>
+  
+  
+    <a class="taxa" href="https://rosespreadsheet.com/tags/index/">Index</a>
+  
+  
+    <a class="taxa" href="https://rosespreadsheet.com/tags/match/">Match</a>
+  
+  
+    <a class="taxa" href="https://rosespreadsheet.com/tags/vlookup/">Vlookup</a>
+  
+  
+    <a class="taxa" href="https://rosespreadsheet.com/tags/xlookup/">Xlookup</a>
+  
+</div>
+
+
+<h6>
+  Categories
+</h6>
+
+<div class="taxa-container">
+  
+  
+    <a class="taxa" href="https://rosespreadsheet.com/categories/functions/">Functions</a>
+  
+</div>
+
+
+        <hr class="mobile white-hr" />
+      </div>
+    </div>
+    
+    <div class="footer-info-text">
+      <p>
+        <a href="mailto:rosemhuyen@gmail.com" class="bi bi-envelope-fill" style="margin: 0px 10px"></a>
+        <a href="https://www.facebook.com/rosemhuyen" class="bi bi-facebook" style="margin: 0px 10px"></a>
+        <a href="https://www.linkedin.com/in/rosemhuyen/" class="bi bi-linkedin" style="margin: 0px 10px"></a>
+      </p>
+      <p>
+        <span>&copy;</span>
+        <span>2023</span>
+        <span>Rose Nguyen</span>
+      </p>
+    </div>
+    <div style="text-align: right; margin-bottom: 0.25em; font-size: 1.2em">
+      <a class="primary-icon to-top" href="#" aria-label="navigate to top">
+        <i class="bi bi-arrow-up-circle-fill"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

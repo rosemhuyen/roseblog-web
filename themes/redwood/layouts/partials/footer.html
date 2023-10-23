@@ -1,0 +1,48 @@
+<footer>
+  <!-- Pagination for list pages -->
+  {{ if eq .Kind "section" }}
+  <div>{{ template "_internal/pagination.html" . }}</div>
+  {{ end }}
+  <!-- Previous/Next articles -->
+  {{ if eq .Kind "page" }}
+  <div class="prev-next">{{ partial "prevNext" .}}</div>
+  {{ end }}
+  <div class="footer shadow round-corner">
+    <!-- Recent Posts -->
+    <div class="grid-container">
+      <div class="footer-recent-posts">
+        <h6>Recent Posts</h6>
+        <ol>
+          {{ range ((where .Site.Pages "Kind" "page").ByDate.Reverse) | first 7 }}
+          <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ol>
+        <a href="{{ `post` | relURL }}">...ALL POSTS</a>
+        <hr class="mobile white-hr" />
+      </div>
+      <div>
+        {{ partial "index/siteSections.html" . }}
+        {{ partial "taxa" (dict "taxo" .Site.Taxonomies "mysite" .) }}
+        <hr class="mobile white-hr" />
+      </div>
+    </div>
+    <!-- Footer info from config -->
+    <div class="footer-info-text">
+      <p>
+        <a href="{{ .Site.Params.social.email }}" class="bi bi-envelope-fill" style="margin: 0px 10px"></a>
+        <a href="{{ .Site.Params.social.facebook }}" class="bi bi-facebook" style="margin: 0px 10px"></a>
+        <a href="{{ .Site.Params.social.linkedin }}" class="bi bi-linkedin" style="margin: 0px 10px"></a>
+      </p>
+      <p>
+        {{ if .Site.Params.theme.copyrightInFooter }}<span>&copy;</span>{{end}}
+        <span>{{ dateFormat "2006" now }}</span>
+        <span>{{ .Site.Author.name | safeHTML }}</span>
+      </p>
+    </div>
+    <div style="text-align: right; margin-bottom: 0.25em; font-size: 1.2em">
+      <a class="primary-icon to-top" href="#" aria-label="navigate to top">
+        <i class="bi bi-arrow-up-circle-fill"></i>
+      </a>
+    </div>
+  </div>
+</footer>

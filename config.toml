@@ -1,0 +1,25 @@
+baseURL = "https://rosespreadsheet.com"
+languageCode = "en"
+defaultContentLanguage = "en"                             # en / zh-cn / ... (This field determines which i18n file to use)
+title = "Stupid Spreadsheets"
+theme = "redwood"
+
+[author]                  # essential                     # 必需
+name = "Rose Nguyen"
+
+[sitemap]                 # essential                     # 必需
+changefreq = "weekly"
+priority = 0.5
+filename = "sitemap.xml"
+
+[params.social]                                         # 社交链接
+email = "mailto:rosemhuyen@gmail.com"
+facebook = "https://www.facebook.com/rosemhuyen"
+linkedin = "https://www.linkedin.com/in/rosemhuyen/"
+
+[params.theme]
+copyrightInFooter = true
+
+[params.about]
+profileImage = "/images/profile.jpg"
+narrative = "Stupid me either ㋡                    Welcome to my stupid world playing with my stupid spreadsheets. Have fun!"

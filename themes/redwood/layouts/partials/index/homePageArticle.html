@@ -1,0 +1,7 @@
+
+    <h1 style="margin: 0"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+    <p class="document-date">
+      {{ .Date.Format (.Site.Params.dateFormatToUse | default "2006-01-02") }} &middot; {{ .Site.Author.name }}
+    </p>
+    <hr class="red-hr"/>
+    {{ .Content }}
